@@ -5,11 +5,17 @@ public class Pessoa {
     protected String cpf;
     protected Endereço endereço;
 
-    public void imprime(){
+    public Pessoa(String nome){
+        this.nome = nome;
+    }
+
+    public void imprime() {
         System.out.println(this.nome);
         System.out.println(this.cpf);
         System.out.println(this.endereço.getRua() + " " + this.endereço.getCep());
     }
+
+
 
     public String getNome() {
         return nome;

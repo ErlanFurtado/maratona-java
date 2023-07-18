@@ -9,13 +9,11 @@ public class HerançaTest01 {
         Endereço endereço = new Endereço();
         endereço.setRua("Rua 2");
         endereço.setCep("1099387");
-        Pessoa pessoa = new Pessoa();
-        pessoa.setNome("Joao");
+        Pessoa pessoa = new Pessoa("Joao");
         pessoa.setCpf("98731238");
         pessoa.setEndereço(endereço);
         pessoa.imprime();
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome(" Naruto ");
+        Funcionario funcionario = new Funcionario(" Naruto ");
         funcionario.setCpf(" 232344");
         funcionario.setEndereço(endereço);
         funcionario.setSalario(2000);
