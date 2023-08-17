@@ -12,20 +12,17 @@ public class RumtimeExceptionTest04 {
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Dentro do Index");
 
-        }catch (RuntimeException e){
+        } catch (RuntimeException e) {
             System.out.println("Dentro da Runtime");
         }
 
         try {
             talvezLanceException();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (FileNotFoundException e) {
+        } catch (SQLException | FileNotFoundException e) {
             e.printStackTrace();
         }
-
     }
-    private static void talvezLanceException() throws SQLException, FileNotFoundException{
+    private static void talvezLanceException() throws SQLException, FileNotFoundException {
 
     }
 }
