@@ -12,7 +12,7 @@ public class DateTimeFormatterTest01 {
         System.out.println(s1);
         System.out.println(s2);
         System.out.println(s3);
-        
+
         DateTimeFormatter formatterBR = DateTimeFormatter.ofPattern("dd/MM/yyy");
         String formatBR = LocalDate.now().format(formatterBR);
         System.out.println(formatBR);
