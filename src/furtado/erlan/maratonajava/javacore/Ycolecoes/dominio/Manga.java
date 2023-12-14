@@ -2,7 +2,7 @@ package furtado.erlan.maratonajava.javacore.Ycolecoes.dominio;
 
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements Comparable<Manga> {
     private Long id;
     private String nome;
     private double preco;
@@ -62,4 +62,8 @@ public class Manga {
     }
 
 
+    @Override
+    public int compareTo(Manga o) {
+        return 0;
+    }
 }
