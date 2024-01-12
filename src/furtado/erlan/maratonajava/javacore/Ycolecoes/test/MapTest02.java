@@ -4,6 +4,7 @@ import furtado.erlan.maratonajava.javacore.Ycolecoes.dominio.Consumidor;
 import furtado.erlan.maratonajava.javacore.Ycolecoes.dominio.Manga;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MapTest02 {
@@ -17,12 +18,16 @@ public class MapTest02 {
         Manga manga3 = new Manga(4L, "Pokemon", 3.2);
         Manga manga4 = new Manga(3L, "Attack on titan", 11.20);
         Manga manga5 = new Manga(2L, "Dragon ball", 2.99);
-        Map<Consumidor, Manga> consumidorManga = new  HashMap<>();
-        consumidorManga.put(consumidor1, manga1);
-        consumidorManga.put(consumidor2, manga4);
-        for (Map.Entry<Consumidor, Manga> entry : consumidorManga.entrySet());
-        System.out.println();
 
-        System.out.println(consumidor1);
+
+        List<Manga> mangaConsumidor1List = List.of(manga1, manga2, manga3);
+        List<Manga> mangaConsumidor2List = List.of(manga3, manga4);
+        Map<Consumidor, List<Manga>> consumidorMangaMap = new  HashMap<>();
+        consumidorMangaMap.put(consumidor1, mangaConsumidor1List);
+        consumidorMangaMap.put(consumidor2, mangaConsumidor2List);
+        for (Map.Entry<Consumidor, List<Manga>> entry : consumidorMangaMap.entrySet());
+       // for (Manga  manga : entry.getValue()){
+
+        }
     }
-}
+
