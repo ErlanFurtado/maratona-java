@@ -14,6 +14,10 @@ public class GenericTest01 {
             System.out.println(o);
         }
         add(lista, new Consumidor("Midoriya"));
+
+        for (Object o :  lista){
+            System.out.println(o);
+        }
     }
     private static void add(List lista, Consumidor consumidor){
         lista.add(consumidor);
